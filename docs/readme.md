@@ -10,6 +10,7 @@ KATEGORI :
  - Cryptoghrapy
  - Web exploitation 
  - Forensic
+ - Binary Exploitation
 
 Infrastruktur ? ctfd ? and what ?
 
