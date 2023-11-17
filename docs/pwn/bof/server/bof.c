@@ -2,7 +2,7 @@
 
 void flag(int key){
 	char flag[32];
-	printf("berikan kunci untuk memastikan identitas : \n");
+	printf("Apa yang sedang kamu pikirkan? : \n");
 	scanf("%s", &flag);
 	if(key != 0xdeadbeef){
 		printf("\nhoho, ez banget yak!\n");
