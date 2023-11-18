@@ -4,7 +4,7 @@ void flag(int key){
 	char flag[64];
 	printf("Apa yang sedang kamu pikirkan? : \n");
 	scanf("%s", &flag);
-	if(key != 0xdeadbeef){
+	if(key == 0xcafebabe){
 		printf("\nhoho, ez banget yak!\n");
 		system("/bin/cat flag");
 	}
