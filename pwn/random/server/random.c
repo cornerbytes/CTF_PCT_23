@@ -2,8 +2,7 @@
 
 int main(){
 	unsigned int random;
-	random = rand();	// random value!
-	printf("rand = %x", random);
+	random = rand();
 	unsigned int key=0;
 	printf("Berikan kunci nya!\n");
 	scanf("%d", &key);
