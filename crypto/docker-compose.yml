@@ -1,0 +1,17 @@
+version: "2"
+services:
+  attack_on_ofb:
+    build: ./attack_on_ofb/server/
+    ports:
+      - "9999:9999"
+    container_name: attack_on_ofb
+    mem_limit: 50m
+    restart: always
+
+  pomni_cbc:
+    build: ./pomni_cbc/server/
+    ports:
+      - "1337:1337"
+    container_name: pomni_cbc
+    mem_limit: 50m
+    restart: always
