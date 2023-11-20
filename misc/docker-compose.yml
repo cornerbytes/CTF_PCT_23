@@ -1,0 +1,17 @@
+version: "2"
+services:
+  mtk_menyenangkan:
+    build: ./mtk_menyenangkan/server/
+    ports:
+      - "7777:7777"
+    container_name: mtk_menyenangkan
+    mem_limit: 50m
+    restart: always
+
+  kaufmo_the_clown:
+    build: ./kaufmo_the_clown/server/
+    ports:
+      - "2023:2023"
+    container_name: kaufmo_the_clown
+    mem_limit: 50m
+    restart: always
