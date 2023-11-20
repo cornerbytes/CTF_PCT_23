@@ -1,0 +1,24 @@
+version: "2"
+services:
+  bof:
+    build: ./bof/server/
+    ports:
+      - "5000:5000"
+    container_name: bof
+    mem_limit: 50m
+    restart: always
+
+  bof2:
+    build: ./bof2/server/
+    ports:
+      - "4000:5000"
+    container_name: bof2
+    mem_limit: 50m
+    restart: always
+  random:
+    build: ./random/server/
+    ports:
+      - "3000:5000"
+    container_name: random
+    mem_limit: 50m
+    restart: always
