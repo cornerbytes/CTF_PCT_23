@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<style>
+  div {
+    position: fixed;
+    padding: 30px 30px;
+    left: 50%;
+    top: 50%;
+  }
+  div button {
+    outline: none;
+    font-size: 15px;
+    width: 170px;
+    height: 50px;
+    background-image: linear-gradient(to right, lightcyan, cyan);
+    border-radius: 10px;
+  }
+  input {
+    display: none;
+
+  }
+  .new_button {
+    outline: none;
+    font-size: 15px;
+    width: 170px;
+    height: 50px;
+    background-image: linear-gradient(to right, orange, orangered);
+    border-radius: 10px;
+  }
+  h1 {
+  text-align: center;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+  p {
+    text-align: center;
+  }
+</style>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>The Unclickable Button!</title>
+</head>
+
+<body>
+  <h1>dapat flag kalau berhasil tekan tombol</h1>
+  <p>yes! you can actually click the button</p>
+  <input type="checkbox" id="check_click">
+  <div id="div" onmouseover="change()">
+    <button tabindex="-1" onclick="how()" id="button" onmousemove="change()">Try to click me</button>
+  </div>
+  <script>
+    var div = document.getElementById("div");
+    var button = document.getElementById("button");
+    var check_click = document.getElementById("check_click");
+    phrases = ["Ayo pencet tombolnya", "wkwkw gk bisa ya ?", "ayo pukul aku", "Try to click me"];
+
+    function toggle() {
+      button.classList.toggle("new_button");
+    }
+
+    document.addEventListener("keydown", function (event) {
+      if (event.ctrlKey) {
+        alert("hayo ngapain tekan tombol ctrl ?");
+        close()
+        event.preventDefault();
+      }
+    });
+
+    function rand(phrases) {
+      return phrases[Math.floor(Math.random() * phrases.length)];
+    }
+
+    function change_phrase() {
+      if (check_click.checked == true) {
+        check_click.checked = true;
+        button.innerHTML = "You clicked me!";
+      }
+      else {
+        button.innerHTML = rand(phrases);
+      }
+    }
+
+    function change() {
+      var rand_1 = Math.floor(Math.random() * 70) + 20;
+      div.style.left = rand_1 + "%";
+      var rand_2 = Math.floor(Math.random() * 70) + 20;
+      div.style.top = rand_2 + "%";
+      div.style.transitionDuration = "0.1s";
+    }
+    setInterval(change_phrase, 500);
+    document.addEventListener('contextmenu', event =>
+      event.preventDefault()
+
+    );
+    document.addEventListener("keydown", function (key) {
+      if (key.which == 32) {
+        toggle();
+        key.preventDefault();
+      }
+    });
+    function how() {
+      check_click.checked = true;
+      button.innerHTML = "You clicked me!";
+      alert("PCT23{inspect_element_atau_main_dulu_wkwkwk}");
+    }
+
+  </script>
+</body>
+
+</html>
