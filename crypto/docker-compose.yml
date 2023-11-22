@@ -5,7 +5,7 @@ services:
     ports:
       - "9999:9999"
     container_name: attack_on_ofb
-    mem_limit: 50m
+    mem_limit: 200m
     restart: always
 
   pomni_cbc:
@@ -13,5 +13,5 @@ services:
     ports:
       - "1337:1337"
     container_name: pomni_cbc
-    mem_limit: 50m
+    mem_limit: 200m
     restart: always
