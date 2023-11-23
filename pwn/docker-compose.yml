@@ -15,6 +15,7 @@ services:
     container_name: bof2
     mem_limit: 50m
     restart: always
+
   random:
     build: ./random/server/
     ports:
@@ -22,3 +23,21 @@ services:
     container_name: random
     mem_limit: 50m
     restart: always
+
+  welcomer:
+    build: ./welcomer/server/
+    ports:
+      - "2000:5000"
+    container_name: random
+    mem_limit: 50m
+    restart: always
+
+  welcomer2:
+    build: ./welcomer2/server/
+    ports:
+      - "7000:5000"
+    container_name: welcomer2
+    mem_limit: 50m
+    restart: always
+
+
