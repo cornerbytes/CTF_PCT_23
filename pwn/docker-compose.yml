@@ -28,7 +28,7 @@ services:
     build: ./welcomer/server/
     ports:
       - "2000:5000"
-    container_name: random
+    container_name: welcomer
     mem_limit: 50m
     restart: always
 
