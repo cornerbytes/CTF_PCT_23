@@ -1,0 +1,37 @@
+version: "2"
+services:
+  figlet:
+    build: ./figlet/server/
+    ports:
+      - "12340:80"
+    container_name: web-figlet
+    restart: always
+
+  hosts:
+    build: ./hosts/server/
+    ports:
+      - "12341:80"
+    container_name: web-hosts
+    restart: always
+
+  inspeksi_kesehatan:
+    build: ./inspeksi_kesehatan/server/
+    ports:
+      - "12342:80"
+    container_name: web-inspeksi_kesehatan
+    restart: always
+
+  juggler:
+    build: ./juggler/server/
+    ports:
+      - "12343:80"
+    container_name: web-jugler
+    restart: always
+
+  security_research:
+    build: ./security_research/server/
+    ports:
+      - "12344:5000"
+    container_name: web-security_research
+    restart: always
+

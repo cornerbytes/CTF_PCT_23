@@ -10,3 +10,10 @@ PWN :
  - bof `5000`
  - bof2 `4000`
  - random `3000`
+
+WEB:
+ - figlet: `12340`
+ - hosts: `12341`
+ - inspeksi_kesehatan: `12342`
+ - juggler: `12343`
+ - security_research: `12344`
